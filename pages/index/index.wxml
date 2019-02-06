@@ -1,0 +1,103 @@
+<form bindsubmit="check">
+  <view>
+    <view class='titles'><text>1.姓名</text></view>
+    <input class='inputbox' name="name"></input>
+  </view>
+
+  <view>
+    <view class='titles'><text>2.性别</text></view>
+    <radio-group class="inputbox" name="gender" bindchange="radioChange">
+      <radio wx:for-items="{{gender}}" value="{{item.value}}">
+        <text>{{item.name}}</text>
+      </radio>
+    </radio-group>
+  </view>
+
+  <view>
+    <view class='titles'><text>3.出生日期</text></view>
+    <picker  class='inputbox' name="birthday" mode="date" value="{{date}}" start="1990-01-01" end="2019-01-01" bindchange="bindDateChange">
+      <text>{{date}}</text>
+    </picker>
+  </view>
+
+  <view>
+    <view class='titles'><text>4.籍贯</text></view>
+    <picker  class='inputbox' name="origin" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <text>{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+    </picker>
+  </view>
+
+  <view>
+    <view class='titles'><text>5.学号</text></view>
+    <input class='inputbox' name="number"></input>
+  </view>
+
+  <view>
+    <view class='titles'><text>6.院系</text></view>
+    <picker class='inputbox' name="department" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <text>{{array[index]}}</text>
+    </picker>
+  </view>
+
+  <view>
+    <view class='titles'><text>7.宿舍地址</text></view>
+    <input class='inputbox' name="dormitory" placeholder="紫菘xx栋xxx室"></input>
+  </view>
+
+  <view>
+    <view class='titles'><text>8.联系电话</text></view>
+    <input class='inputbox' name="phonenumber" type='number' maxlength="11"></input>
+  </view>
+
+  <view>
+    <view class='titles'><text>9.电子邮箱</text></view>
+    <input class='inputbox' name="email"></input>
+  </view>
+
+  <view>
+    <view class='titles'><text>10.第一志愿</text></view>
+    <picker class='inputbox' name="firstchoice" bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+      <text>{{array1[index1]}}</text>
+    </picker>
+  </view>
+
+<view>
+    <view class='titles'><text>11.第二志愿</text></view>
+    <picker class='inputbox' name="secondchoice" bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+      <text>{{array2[index2]}}</text>
+    </picker>
+  </view>
+
+  <view>
+    <view class='titles'><text>12.是否服从调剂</text></view>
+    <switch class='inputbox' name="obey"></switch>
+  </view>
+
+  <view>
+    <view class='titles'><text>13.爱好特长</text></view>
+    <textarea class='largerinputbox' name="hobby" style='hight: 3em'></textarea>
+  </view>
+
+  <view>
+    <view class='titles'><text>14.实践经历</text></view>
+    <textarea class='largerinputbox' name="experience"></textarea>
+  </view>
+
+  <view>
+    <view class='titles'><text>15.自我评价</text></view>
+    <textarea class='largerinputbox' name="selfassessment"></textarea>
+  </view>
+
+  <view>
+    <view class='titles'><text>16.你希望社联是怎样的一个组织？</text></view>
+    <textarea class='largerinputbox' name="expectation"></textarea>
+  </view>
+
+  <view class='titles'><text>\n</text></view>
+
+  <view>
+    <button type='primary' form-type='submit'>提交</button>
+  </view>
+
+  <view class='titles'><text>\n</text></view>
+</form>

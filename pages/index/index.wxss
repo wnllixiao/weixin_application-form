@@ -1,0 +1,13 @@
+.titles{
+  background-color: #F8F8F8;
+  font-size: large;
+}
+
+.inputbox{
+  background-color: #FFFFFF;
+  height: 10mm;
+}
+
+.largerinputbox{
+  height: 20mm;
+}
